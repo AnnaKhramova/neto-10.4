@@ -6,4 +6,6 @@
 
     <include file="20240924-create_persons_table.xml" relativeToChangelogFile="true"/>
     <include file="20240924-insert_persons_data.xml" relativeToChangelogFile="true"/>
+    <include file="20240925-create_tables_customers_orders.xml" relativeToChangelogFile="true"/>
+    <include file="20240925-insert_customers_orders_data.xml" relativeToChangelogFile="true"/>
 </databaseChangeLog>
