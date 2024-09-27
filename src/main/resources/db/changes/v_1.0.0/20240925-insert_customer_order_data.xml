@@ -1,35 +1,35 @@
 <?xml version="1.1" encoding="UTF-8" standalone="no"?>
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
     <changeSet author="anna khramova" id="1">
-        <insert tableName="customers">
+        <insert tableName="customer">
             <column name="id" valueNumeric="1"/>
             <column name="name" value="alexey"/>
             <column name="surname" value="petrov"/>
             <column name="age" valueNumeric="23"/>
             <column name="phone_number" valueNumeric="89534562178"/>
         </insert>
-        <insert tableName="customers">
+        <insert tableName="customer">
             <column name="id" valueNumeric="2"/>
             <column name="name" value="anna"/>
             <column name="surname" value="petrova"/>
             <column name="age" valueNumeric="27"/>
             <column name="phone_number" valueNumeric="89534513247"/>
         </insert>
-        <insert tableName="customers">
+        <insert tableName="customer">
             <column name="id" valueNumeric="3"/>
             <column name="name" value="alexey"/>
             <column name="surname" value="ivanov"/>
             <column name="age" valueNumeric="20"/>
             <column name="phone_number" valueNumeric="89539877670"/>
         </insert>
-        <insert tableName="customers">
+        <insert tableName="customer">
             <column name="id" valueNumeric="4"/>
             <column name="name" value="ivan"/>
             <column name="surname" value="petrov"/>
             <column name="age" valueNumeric="25"/>
             <column name="phone_number" valueNumeric="89534509876"/>
         </insert>
-        <insert tableName="customers">
+        <insert tableName="customer">
             <column name="id" valueNumeric="5"/>
             <column name="name" value="inna"/>
             <column name="surname" value="kotova"/>
@@ -38,49 +38,49 @@
         </insert>
     </changeSet>
     <changeSet author="anna khramova" id="2">
-        <insert tableName="orders">
+        <insert tableName="order">
             <column name="id" valueNumeric="1"/>
             <column name="date" valueDate="2024-03-14"/>
             <column name="customer_id" valueNumeric="1"/>
             <column name="product_name" value="laptop"/>
             <column name="amount" valueNumeric="175000"/>
         </insert>
-        <insert tableName="orders">
+        <insert tableName="order">
             <column name="id" valueNumeric="2"/>
             <column name="date" valueDate="2024-03-14"/>
             <column name="customer_id" valueNumeric="2"/>
             <column name="product_name" value="laptop"/>
             <column name="amount" valueNumeric="168000"/>
         </insert>
-        <insert tableName="orders">
+        <insert tableName="order">
             <column name="id" valueNumeric="3"/>
             <column name="date" valueDate="2024-03-14"/>
             <column name="customer_id" valueNumeric="1"/>
             <column name="product_name" value="desktop"/>
             <column name="amount" valueNumeric="275000"/>
         </insert>
-        <insert tableName="orders">
+        <insert tableName="order">
             <column name="id" valueNumeric="4"/>
             <column name="date" valueDate="2024-03-14"/>
             <column name="customer_id" valueNumeric="3"/>
             <column name="product_name" value="mouse"/>
             <column name="amount" valueNumeric="15000"/>
         </insert>
-        <insert tableName="orders">
+        <insert tableName="order">
             <column name="id" valueNumeric="5"/>
             <column name="date" valueDate="2024-03-14"/>
             <column name="customer_id" valueNumeric="2"/>
             <column name="product_name" value="desktop"/>
             <column name="amount" valueNumeric="230000"/>
         </insert>
-        <insert tableName="orders">
+        <insert tableName="order">
             <column name="id" valueNumeric="6"/>
             <column name="date" valueDate="2024-03-14"/>
             <column name="customer_id" valueNumeric="4"/>
             <column name="product_name" value="keyboard"/>
             <column name="amount" valueNumeric="17000"/>
         </insert>
-        <insert tableName="orders">
+        <insert tableName="order">
             <column name="id" valueNumeric="7"/>
             <column name="date" valueDate="2024-03-14"/>
             <column name="customer_id" valueNumeric="5"/>

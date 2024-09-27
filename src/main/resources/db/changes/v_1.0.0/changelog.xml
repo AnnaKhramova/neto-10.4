@@ -4,8 +4,8 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
 
-    <include file="20240924-create_persons_table.xml" relativeToChangelogFile="true"/>
-    <include file="20240924-insert_persons_data.xml" relativeToChangelogFile="true"/>
-    <include file="20240925-create_tables_customers_orders.xml" relativeToChangelogFile="true"/>
-    <include file="20240925-insert_customers_orders_data.xml" relativeToChangelogFile="true"/>
+    <include file="20240924-create_person_table.xml" relativeToChangelogFile="true"/>
+    <include file="20240924-insert_person_data.xml" relativeToChangelogFile="true"/>
+    <include file="20240925-create_tables_customer_order.xml" relativeToChangelogFile="true"/>
+    <include file="20240925-insert_customer_order_data.xml" relativeToChangelogFile="true"/>
 </databaseChangeLog>
