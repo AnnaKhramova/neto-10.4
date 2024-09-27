@@ -6,20 +6,20 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import ru.vtb.vzss.neto104.model.Persons;
-import ru.vtb.vzss.neto104.repository.PersonsRepository;
+import ru.vtb.vzss.neto104.model.Person;
+import ru.vtb.vzss.neto104.repository.PersonRepository;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/persons")
-public class PersonsController {
+@RequestMapping("/person")
+public class PersonController {
     @Autowired
-    private PersonsRepository personsRepository;
+    private PersonRepository personRepository;
 
     @GetMapping("/by-city")
-    public ResponseEntity<List<Persons>> getPersonsByCity(@RequestParam("city") String city) {
-        return ResponseEntity.ok(personsRepository.getPersonsByCity(city));
+    public ResponseEntity<List<Person>> getpersonByCity(@RequestParam("city") String city) {
+        return ResponseEntity.ok(personRepository.getpersonByCity(city));
     }
 
 }

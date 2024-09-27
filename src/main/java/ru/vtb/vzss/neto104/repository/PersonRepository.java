@@ -4,20 +4,22 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.Query;
 import org.springframework.stereotype.Repository;
-import ru.vtb.vzss.neto104.model.Persons;
+import org.springframework.transaction.annotation.Transactional;
+import ru.vtb.vzss.neto104.model.Person;
 
 import java.util.List;
 
 @Repository
-public class PersonsRepository {
+@Transactional(readOnly = true)
+public class PersonRepository {
 
     @PersistenceContext
     private EntityManager entityManager;
 
-    public List<Persons> getPersonsByCity(String city) {
-        Query query = entityManager.createQuery("select p from Persons p where p.cityOfLiving = :city");
+    public List<Person> getpersonByCity(String city) {
+        Query query = entityManager.createQuery("select p from Person p where p.cityOfLiving = :city");
         query.setParameter("city", city);
-        List<Persons> result = query.getResultList();
+        List<Person> result = query.getResultList();
         return result;
     }
 

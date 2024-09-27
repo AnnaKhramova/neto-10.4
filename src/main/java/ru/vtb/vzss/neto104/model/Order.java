@@ -3,27 +3,30 @@ package ru.vtb.vzss.neto104.model;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.sql.Date;
 
 @Entity
-@Table(name = "orders", schema = "netology")
-@Data
+@Table(name = "order", schema = "netology")
 @Builder
+@EqualsAndHashCode(exclude = "customer")
+@ToString
 @AllArgsConstructor
 @NoArgsConstructor
-public class Orders {
+public class Order {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     @Column(nullable = false)
@@ -31,9 +34,9 @@ public class Orders {
 
     @ManyToOne
     @JoinColumn(name = "customer_id", nullable = false)
-    private Customers customer;
+    private Customer customer;
 
-    @Column(nullable = false)
+    @Column(name = "product_name", nullable = false)
     private String productName;
 
     @Column(nullable = false)
