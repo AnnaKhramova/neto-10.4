@@ -1,4 +1,4 @@
-package ru.vtb.vzss.neto104.model;
+package ru.akhramova.neto104.model;
 
 
 import lombok.AllArgsConstructor;

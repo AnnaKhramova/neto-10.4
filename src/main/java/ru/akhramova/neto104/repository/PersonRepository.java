@@ -1,9 +1,9 @@
-package ru.vtb.vzss.neto104.repository;
+package ru.akhramova.neto104.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
-import ru.vtb.vzss.neto104.model.Person;
+import ru.akhramova.neto104.model.Person;
 
 import java.util.List;
 import java.util.Optional;

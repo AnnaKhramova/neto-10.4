@@ -1,4 +1,4 @@
-package ru.vtb.vzss.neto104.config;
+package ru.akhramova.neto104.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -31,21 +31,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and()
                 .withUser("Ivan")
                 .password(passwordEncoder().encode("pass"))
-                .authorities("READ");
-    }
-
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http.formLogin()
-                .and()
-                .authorizeRequests().antMatchers("/person/hello").permitAll()
-                .and()
-                .authorizeRequests().antMatchers("/person/by-city").authenticated()
-                .and()
-                .authorizeRequests().antMatchers("/person/by-name").authenticated()
-                .and()
-                .authorizeRequests().antMatchers("/person/less-than").hasAuthority("admin")
-                .and()
-                .authorizeRequests().anyRequest().authenticated();
+                .roles("READ");
     }
 }
